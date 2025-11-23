@@ -14,7 +14,7 @@ public class TestProducto {
      * @param args the command line arguments
     **/
     public static void main(String[] args) {
-        
+     
         // ------------------------------------
         // PRUEBA DE LA SUPERCLASE PRODUCTO 
         // ------------------------------------
@@ -47,13 +47,35 @@ public class TestProducto {
            2, 
            55.75, 
            "ESP007" 
-           );
+        );
         
         // Asegúrate de corregir también el nombre de la variable si usas 'productoRefrigerado'
         System.out.println("\nDatos del producto refrigerado:\n" + productoRefrigerado.toString());
         
+        // ------------------------------------------------
+        // PRUEBA DE LA SUBCLASE PRODUCTOCONGELADO
+        // ------------------------------------------------
+        
+        System.out.println("\n*** PRUEBA DE PRODUCTO CONGELADO ***");
+        try {
+            // 1. Instanciación del objeto ProductoCongelado
+            ProductoCongelado productoCongelado = new ProductoCongelado(
+                "5566778", 
+                "Pescado Congelado", 
+                "15/03/2026", 
+                3, 
+                345.99, 
+                -18.0 // Temperatura VÁLIDA (debe ser < 0)
+            );
+        
+            // 2. LÍNEA CLAVE: Imprimir el objeto para mostrar los datos
+            System.out.println("Datos del producto congelado:\n" + productoCongelado.toString());
+
+        } catch (IllegalArgumentException e) {
+            
+            // Este bloque captura si la validación falla (ej. si usaras 10.0 °C)
+            System.err.println("Error al crear Producto Congelado: " + e.getMessage());
+        }
     }
 }
-    
-    
 

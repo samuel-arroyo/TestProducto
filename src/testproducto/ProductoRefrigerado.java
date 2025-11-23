@@ -25,7 +25,8 @@ public class ProductoRefrigerado extends Producto {
     
 
     
-    public ProductoRefrigerado(String claveProducto, String nombreProducto, String fechaCaducidad, int numeroLote, double precioVenta, String esP007) {
+    public ProductoRefrigerado(String claveProducto, String nombreProducto, 
+            String fechaCaducidad, int numeroLote, double precioVenta,String codigoSupervision) {
         
         // Llama al constructor de la superclase Producto
         super(claveProducto, nombreProducto, fechaCaducidad, numeroLote, precioVenta);
