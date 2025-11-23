@@ -35,7 +35,23 @@ public class TestProducto {
         
         System.out.println("\nDatos del producto fresco:\n" + productoFresco.toString());
         
-        // (Y el código para ProductoRefrigerado y ProductoCongelado)
+        // ------------------------------------------------
+        // PRUEBA DE LA SUBCLASE PRODUCTOREFRIGERADO
+        // ------------------------------------------------
+        
+        // Datos de prueba: se añaden los campos de Producto + el campo específico.
+        ProductoRefrigerado productoRefrigerado = new ProductoRefrigerado(
+           "1122334", 
+           "Yogurt Natural", 
+           "01/12/2025", 
+           2, 
+           55.75, 
+           "ESP007" 
+           );
+        
+        // Asegúrate de corregir también el nombre de la variable si usas 'productoRefrigerado'
+        System.out.println("\nDatos del producto refrigerado:\n" + productoRefrigerado.toString());
+        
     }
 }
     
