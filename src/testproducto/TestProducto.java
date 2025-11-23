@@ -25,8 +25,17 @@ public class TestProducto {
         
         // Imprimiendo los datos de prueba de la superclase [cite: 65]
         System.out.println("Prueba de la superclase:\n" + miProducto.toString());
+    
+        // ------------------------------------------------------------------
+        // --- PRUEBA DE LA SUBCLASE PRODUCTOFRESCO ---
+        // -------------------------------------------------------------------
 
-        // ... Aquí irían las pruebas de las otras subclases ...
+        ProductoFresco productoFresco = new ProductoFresco(
+            "2839283", "Tilapia", "19/11/2025", 1, 180.23, "20/11/2025", "China");
+        
+        System.out.println("\nDatos del producto fresco:\n" + productoFresco.toString());
+        
+        // (Y el código para ProductoRefrigerado y ProductoCongelado)
     }
 }
     
